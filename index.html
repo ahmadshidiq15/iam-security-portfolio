@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IAM & Security Engineering Portfolio</title>
+<style>
+:root {
+  --site-primary: #163a5f;
+  --site-on-primary: #ffffff;
+  --site-secondary: #e4edf5;
+  --site-on-secondary: #17334d;
+  --site-background: #f5f7fa;
+  --site-on-background: #182533;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); line-height: 1.6; }
+#app { min-height: 100vh; background-color: var(--site-background); color: var(--site-on-background); }
+.hero { background: var(--site-primary); color: var(--site-on-primary); padding: calc(64px * var(--site-spacing-scale)) max(24px, calc((100vw - 1080px) / 2)); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; width: 360px; height: 360px; border: 1px solid currentColor; border-radius: 50%; right: -90px; top: -190px; opacity: calc(.12 * var(--site-decoration-opacity)); pointer-events: none; }
+.eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: .78rem; font-weight: 700; opacity: .82; }
+h1,h2,h3 { font-family: var(--site-font-heading); line-height: 1.2; }
+h1 { font-size: clamp(2.2rem, 5vw, calc(3.8rem * var(--site-heading-scale))); max-width: 760px; margin: 16px 0; letter-spacing: -.04em; }
+.hero p { max-width: 720px; font-size: 1.08rem; opacity: .9; }
+.pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 26px; }
+.pill { border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 6px 12px; font-size: .86rem; }
+main { max-width: 1080px; margin: auto; padding: 38px 24px 70px; }
+.notice { border-left: 4px solid #c28a2c; background: light-dark(#fff8e9, #342b1b); color: light-dark(#533c13, #f7e7c6); padding: 16px 18px; border-radius: calc(10px * var(--site-radius-scale)); margin-bottom: 36px; }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 34px 0 18px; }
+.section-head h2 { margin: 0; font-size: calc(1.7rem * var(--site-heading-scale)); letter-spacing: -.025em; }
+.muted { color: light-dark(#536273, #b4c0cd); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: calc(18px * var(--site-spacing-scale)); }
+.card { background: light-dark(#ffffff, #1c2733); border: 1px solid light-dark(#dce3eb, #344352); border-radius: calc(16px * var(--site-radius-scale)); padding: calc(24px * var(--site-spacing-scale)); box-shadow: 0 8px 28px rgba(18,39,59,.04); }
+.card h3 { margin: 8px 0 10px; font-size: 1.22rem; }
+.icon { width: 42px; height: 42px; display: grid; place-items: center; background: var(--site-secondary); color: var(--site-on-secondary); border-radius: calc(12px * var(--site-radius-scale)); font-weight: 800; }
+.tagrow { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.tag { background: light-dark(#eef2f6, #293847); border-radius: 6px; padding: 4px 8px; font-size: .78rem; }
+.steps { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin-top: 18px; }
+.step { padding: 16px; border-radius: calc(12px * var(--site-radius-scale)); background: light-dark(#edf3f8, #202f3d); }
+.step b { display: block; color: light-dark(#163a5f, #9ec9f3); margin-bottom: 6px; }
+ul { padding-left: 20px; }
+li { margin: 7px 0; }
+.footer { margin-top: 34px; background: var(--site-secondary); color: var(--site-on-secondary); padding: 22px; border-radius: calc(14px * var(--site-radius-scale)); }
+footer { text-align: center; padding: 24px; font-size: .85rem; color: light-dark(#607080, #a9b7c4); }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } .steps { grid-template-columns: 1fr 1fr; } .hero { padding-top: 44px; padding-bottom: 44px; } }
+@media (max-width: 420px) { .steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="app">
+<header class="hero">
+  <div class="eyebrow">Technical Portfolio · Identity & Access Security</div>
+  <h1>IAM Troubleshooting & Security Engineering</h1>
+  <p>A practical portfolio focused on investigating authentication and authorization issues, validating access, and documenting security troubleshooting in a structured, repeatable way.</p>
+  <div class="pills"><span class="pill">Identity & Access Management</span><span class="pill">Access Troubleshooting</span><span class="pill">Security Operations Mindset</span></div>
+</header>
+<main>
+  <div class="notice"><strong>Portfolio transparency:</strong> The case study below is a simulated learning example created to demonstrate a troubleshooting approach. It is not presented as a real incident from an employer or client. No company data, credentials, or confidential details are included.</div>
+  <div class="section-head"><div><div class="eyebrow muted">Featured case study</div><h2>Investigating an “Access Denied” Issue</h2></div></div>
+  <section class="grid">
+    <article class="card"><div class="icon">01</div><h3>Scenario</h3><p>A user can reach an internal application but receives an “Access Denied” message after signing in. The investigation must distinguish an authentication problem from an authorization or entitlement issue.</p><div class="tagrow"><span class="tag">Simulated case</span><span class="tag">IAM</span><span class="tag">Access control</span></div></article>
+    <article class="card"><div class="icon">02</div><h3>Investigation checklist</h3><ul><li>Confirm the user identity and exact error/time.</li><li>Check whether the account is active and authentication succeeds.</li><li>Review assigned roles, groups, and application entitlements.</li><li>Compare expected access with the approved request or policy.</li><li>Review relevant logs, where authorized and available.</li></ul></article>
+    <article class="card"><div class="icon">03</div><h3>Possible causes to validate</h3><ul><li>Required role or group is missing.</li><li>Access request has not been approved or fully provisioned.</li><li>Group membership or entitlement has not synchronized.</li><li>Account status or policy conditions block access.</li><li>Application-side permissions differ from identity-platform assignments.</li></ul></article>
+    <article class="card"><div class="icon">04</div><h3>Resolution and verification</h3><ul><li>Follow the organization’s approval and least-privilege process.</li><li>Correct only the verified assignment or configuration issue.</li><li>Ask the user to retest and confirm the required function works.</li><li>Record the cause, action, evidence, and outcome in the ticket.</li><li>Escalate if logs or permissions are managed by another team.</li></ul></article>
+  </section>
+  <div class="section-head"><div><div class="eyebrow muted">Additional troubleshooting areas</div><h2>IAM & Security troubleshooting scenarios</h2></div></div>
+  <p class="muted">These are generalized troubleshooting patterns for common IAM/security issues. Each scenario is illustrative and must be adapted to the actual tools, procedures, and evidence available in a given environment.</p>
+  <section class="grid">
+    <article class="card"><div class="icon">05</div><h3>Login & authentication failures</h3><p><strong>Symptom:</strong> A user cannot sign in or repeatedly receives an authentication error.</p><ul><li>Confirm the exact error, time, application, and scope of impact.</li><li>Check account status and whether the issue affects one or multiple users.</li><li>Review available authentication events and relevant policy conditions.</li><li>Check time synchronization or identity-provider dependencies where applicable.</li><li>Retest after an approved correction and document the outcome.</li></ul><div class="tagrow"><span class="tag">Authentication</span><span class="tag">Log review</span><span class="tag">Simulated scenario</span></div></article>
+    <article class="card"><div class="icon">06</div><h3>Access denied & permission mismatch</h3><p><strong>Symptom:</strong> Sign-in succeeds, but a user cannot open an application or perform an expected action.</p><ul><li>Separate successful authentication from failed authorization.</li><li>Compare required access with approved roles, groups, and entitlements.</li><li>Check whether changes have propagated to the target application.</li><li>Apply only approved, least-privilege changes.</li><li>Confirm the intended function works after remediation.</li></ul><div class="tagrow"><span class="tag">Authorization</span><span class="tag">RBAC</span><span class="tag">Least privilege</span></div></article>
+    <article class="card"><div class="icon">07</div><h3>Provisioning & deprovisioning</h3><p><strong>Symptom:</strong> A new user does not receive expected access, or access remains after a role or employment change.</p><ul><li>Verify the approved request and source-of-truth user attributes.</li><li>Check the provisioning status and available connector or workflow errors.</li><li>Compare the intended entitlement with the target-system account state.</li><li>For removal, validate completion and follow the defined offboarding controls.</li><li>Record exceptions and escalate failed or delayed workflows.</li></ul><div class="tagrow"><span class="tag">Joiner/mover/leaver</span><span class="tag">Lifecycle</span><span class="tag">Simulated scenario</span></div></article>
+    <article class="card"><div class="icon">08</div><h3>Account lockout & account status</h3><p><strong>Symptom:</strong> A user is locked out or an account appears disabled or inactive.</p><ul><li>Verify the account state and relevant event timestamps.</li><li>Look for repeated failed sign-ins or stale saved credentials where evidence permits.</li><li>Check relevant lockout policy and dependent services.</li><li>Unlock or restore an account only under approved identity-verification procedures.</li><li>Monitor for recurrence and document the likely cause.</li></ul><div class="tagrow"><span class="tag">Account state</span><span class="tag">Policy checks</span><span class="tag">Verification</span></div></article>
+    <article class="card"><div class="icon">09</div><h3>PAM & privileged access</h3><p><strong>Symptom:</strong> An authorized administrator cannot retrieve a privileged credential or start an approved session.</p><ul><li>Verify the requester, approval, target, and permitted access window.</li><li>Check safe/vault access, account onboarding state, and relevant session policy where applicable.</li><li>Review available audit events and connectivity prerequisites.</li><li>Do not expose passwords, secrets, session recordings, or privileged data in public notes.</li><li>Escalate platform-side issues with sanitized evidence and verify access safely.</li></ul><div class="tagrow"><span class="tag">Privileged access</span><span class="tag">Audit trail</span><span class="tag">Simulated scenario</span></div></article>
+    <article class="card"><div class="icon">10</div><h3>AD/LDAP, SSO & MFA integration</h3><p><strong>Symptom:</strong> Authentication or group-based access behaves differently between an identity source and an application.</p><ul><li>Identify the affected authentication flow and the systems involved.</li><li>Validate directory reachability and relevant user/group attributes when authorized.</li><li>Check SSO configuration and error details without publishing tokens or assertions.</li><li>For MFA, verify enrollment and policy requirements using approved support procedures.</li><li>Correlate available logs across systems and escalate with timestamps and sanitized errors.</li></ul><div class="tagrow"><span class="tag">Directory services</span><span class="tag">SSO/MFA</span><span class="tag">Integration</span></div></article>
+  </section>
+  <div class="section-head"><div><div class="eyebrow muted">Methodology</div><h2>Structured troubleshooting workflow</h2></div></div>
+  <section class="steps">
+    <div class="step"><b>1 · Identify</b>Capture symptoms, scope, affected user, application, and time.</div>
+    <div class="step"><b>2 · Diagnose</b>Separate authentication from authorization and verify evidence.</div>
+    <div class="step"><b>3 · Remediate</b>Use approved, least-privilege changes; escalate when needed.</div>
+    <div class="step"><b>4 · Validate</b>Retest access, document the result, and close the feedback loop.</div>
+  </section>
+  <div class="section-head"><div><div class="eyebrow muted">Core competencies demonstrated</div><h2>Technical approach</h2></div></div>
+  <section class="grid">
+    <article class="card"><h3>Identity lifecycle & access control</h3><p>Authentication and authorization troubleshooting, account status checks, role/group/entitlement review, provisioning lifecycle concepts, and least-privilege access.</p></article>
+    <article class="card"><h3>Security operations discipline</h3><p>Evidence-based investigation, careful log review, approved remediation, sanitized ticket notes, post-change verification, and escalation with actionable findings.</p></article>
+  </section>
+  <div class="footer"><strong>About this portfolio</strong><p>This page is an initial public-facing portfolio sample. Add only tools, certifications, labs, or additional case studies that you have personally used or completed. Do not publish real usernames, IP addresses, screenshots, logs, client names, or other confidential information.</p></div>
+</main>
+<footer>IAM · Access Troubleshooting · Security Engineering</footer>
+</div>
+</body>
+</html>
